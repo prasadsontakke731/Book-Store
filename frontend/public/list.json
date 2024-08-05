@@ -1,0 +1,216 @@
+[
+    {
+        "id":1,
+        "title":"Win Your Inner Battle",
+        "auther":"Darius Foroux ",
+        "price":0,
+        "category":"free",
+        "image":"https://m.media-amazon.com/images/I/410GADdasBS._SY445_SX342_.jpg"
+    },
+    {
+        "id":2,
+        "title":"Serendipity",
+        "auther":"mark",
+        "price":0,
+        "category":"free",
+        "image":"https://cdn.shopify.com/s/files/1/0846/4570/8089/files/smc0631_hero.jpg"
+    },
+    {
+        "id":3,
+        "title":"Do It Today",
+        "auther":"Darius Foroux",
+        "price":0,
+        "category":"free",
+        "image":"https://m.media-amazon.com/images/I/61jCkOVf1oL._SY466_.jpg"
+    },
+    {
+        "id":4,
+        "title":"The Book of Life",
+        "auther":"J. Krishnamurti ",
+        "price":0,
+        "category":"free",
+        "image":"https://m.media-amazon.com/images/I/51MB4Tc-cFL._SY466_.jpg"
+    },
+    {
+        "id":5,
+        "title":"Manifest",
+        "auther":"Roxie Nafousi ",
+        "price":30,
+        "category":"mind",
+        "image":"https://m.media-amazon.com/images/I/715u7p+38+L._SY466_.jpg"
+    },
+    {
+        "id":6,
+        "title":"Energize Your Mind",
+        "auther":"Gaur Gopal Das",
+        "price":20,
+        "category":"secret",
+        "image":"https://m.media-amazon.com/images/I/41RwQlo446L._SY445_SX342_.jpg"
+    },
+    {
+        "id":7,
+        "title":"Ignited Minds (R/J) ",
+        "auther":"A.P.J Abdul Kalam ",
+        "price":35,
+        "category":"stallen",
+        "image":"https://m.media-amazon.com/images/I/41uV5nrOfsL._SY445_SX342_.jpg"
+    },
+    {
+        "id":8,
+        "title":"The Habit of Winning ",
+        "auther":"Prakash Iyer ",
+        "price":0,
+        "category":"free",
+        "image":"https://m.media-amazon.com/images/I/51OxDSkJtHL._SY445_SX342_.jpg"
+    },
+    {
+        "id":9,
+        "title":"The Girl Who ",
+        "auther":"Vikrant Khanna ",
+        "price":0,
+        "category":"free",
+        "image":"https://m.media-amazon.com/images/I/61d+deL0NmL._SY445_SX342_.jpg"
+    },
+     {
+        "id":10,
+        "title":"Mongrel",
+        "auther":"Hanako Footman ",
+        "price":56,
+        "category":"success",
+        "image":"https://m.media-amazon.com/images/I/415PxpMk-eL._SY445_SX342_.jpg"
+    },
+    {
+        "id":11,
+        "title":"The crash of 2024",
+        "auther":"Fölster, Stefan",
+        "price":0,
+        "category":"free",
+        "image":"https://d3525k1ryd2155.cloudfront.net/h/712/674/1561674712.0.x.jpg"
+    },
+     {
+        "id":12,
+        "title":"Design Your Thinking",
+        "auther":"Pavan Soni",
+        "price":25,
+        "category":"file",
+        "image":"https://m.media-amazon.com/images/I/61-pFn3uZTL._SY445_SX342_.jpg"
+    }
+    ,
+     {
+        "id":13,
+        "title":"THE ART OF HAPPINESS",
+        "auther":"The Dalai Lama ",
+        "price":0,
+        "category":"free",
+        "image":"https://m.media-amazon.com/images/I/41OeeytRUEL._SY445_SX342_.jpg"
+    },
+    {
+        "id":14,
+        "title":"The Hidden Hindu",
+        "auther":"Akshat Gupta  ",
+        "price":67,
+        "category":"sud",
+        "image":"https://m.media-amazon.com/images/I/51TcWGvqLZL._SY445_SX342_.jpg"
+    }
+    ,
+    {
+        "id":15,
+        "title":"The Story of Tata:",
+        "auther":"Peter Casey  ",
+        "price":0,
+        "category":"free",
+        "image":"https://m.media-amazon.com/images/I/41Wlhll9IHL._SY445_SX342_.jpg"
+    }
+    ,
+    {
+        "id":16,
+        "title":"How to Talk Anyone",
+        "auther":" Leil Lowndes  ",
+        "price":34,
+        "category":"fine",
+        "image":"https://m.media-amazon.com/images/I/41zsCXuI2jL._SY445_SX342_.jpg"
+    }
+     ,
+    {
+        "id":17,
+        "title":"LET'S BUILD A COMPANY",
+        "auther":" HARPREET GROVER  ",
+        "price":65,
+        "category":"seva",
+        "image":"https://m.media-amazon.com/images/I/71aw-JPsQbS._SY466_.jpg"
+    }
+    ,
+    {
+        "id":18,
+        "title":"Think Straight",
+        "auther":" Darius Foroux  ",
+        "price":0,
+        "category":"free",
+        "image":"https://m.media-amazon.com/images/I/415KWIijbDL._SY445_SX342_.jpg"
+    }
+     ,
+    {
+        "id":19,
+        "title":"The Kalki Trilogy",
+        "auther":" Kevin Missal ",
+        "price":0,
+        "category":"free",
+        "image":"https://m.media-amazon.com/images/I/51EIc57chuL._SX342_SY445_.jpg"
+    }
+     ,
+    {
+        "id":20,
+        "title":"Power of your Subconscious Mind",
+        "auther":" Dr Joseph Murphy ",
+        "price":63,
+        "category":"gent",
+        "image":"https://m.media-amazon.com/images/I/41BhiM5jORL._SY445_SX342_.jpg"
+    }
+     ,
+    {
+        "id":21,
+        "title":"Martyr! A Novel",
+        "auther":" Kaveh Akbar ",
+        "price":56,
+        "category":"paid",
+        "image":"https://www.midlandbookshop.com/s/607fe93d7eafcac1f2c73ea4/662a46d4f08bb6d4fd645855/71-u-oh5wsl-_sy425_-640x640.jpg"
+    }
+    ,
+    {
+        "id":22,
+        "title":"You Can",
+        "auther":"George Matthew Adams ",
+        "price":40,
+        "category":"map",
+        "image":"https://m.media-amazon.com/images/I/61aJc8wQX4L._SY466_.jpg"
+    }
+    ,
+    {
+        "id":23,
+        "title":"Average Sucks",
+        "auther":"Michael Bernoff ",
+        "price":30,
+        "category":"return",
+        "image":"https://m.media-amazon.com/images/I/41CNfYGhRvL._SY445_SX342_.jpg"
+    }
+    ,
+    {
+        "id":24,
+        "title":"Don't Believe Everything You Think",
+        "auther":" Joseph Nguyen",
+        "price":60,
+        "category":"beed",
+        "image":"https://m.media-amazon.com/images/I/715qi-cIbML._SY466_.jpg"
+    }
+    ,
+    {
+        "id":25,
+        "title":"Stop Negative Thinking",
+        "auther":"Nick Trenton",
+        "price":25,
+        "category":"sid",
+        "image":"https://m.media-amazon.com/images/I/41s6KkRr3TL._SY445_SX342_.jpg"
+    }
+
+
+]
