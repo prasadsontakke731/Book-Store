@@ -2,7 +2,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import list from "../../public/list.json"
 import Book from '../components/Book'
 function Books() {
   return (

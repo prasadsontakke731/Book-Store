@@ -3,13 +3,14 @@ import dotenv from "dotenv"
 import mongoose from "mongoose"
 import bookRoute from "./routes/bookRoutes.js"
 import userRoute from "./routes/userRoutes.js"
-// import cors from "cors"
+import contactRoute from "./routes/contactRoutes.js"
+import cors from "cors"
 
 
 const app = express()
 dotenv.config()
 app.use(express.json())
-// app.use(cors)
+app.use(cors())
 const PORT = process.env.PORT || 8090
 const MONGODB_URI = process.env.MONGO_URI
 //connect to mongoDB
@@ -25,6 +26,7 @@ try {
 //defining routes
 app.use("/book", bookRoute)
 app.use("/user", userRoute)
+app.use("/contact", contactRoute)
 
 app.listen(PORT, () => {
     console.log(`server is running on Port:${PORT}`);
