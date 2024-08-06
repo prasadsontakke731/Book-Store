@@ -19,7 +19,7 @@ function Contact() {
             email: data.email,
             message: data.message
         }
-        await axios.post("http://localhost:8080/contact", userInfo)
+        await axios.post("https://book-store-three-teal.vercel.app/contact", userInfo)
             .then((res) => {
                 console.log(res.data);
                 if (res.data) {

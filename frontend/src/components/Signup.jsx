@@ -56,7 +56,7 @@ function Signup() {
                             <div className='mt-4 space-y-2'>
                                 <span>Name</span>
                                 <br />
-                                <input type="text" className='py-2 w-full px-3 border rounded-md outline-none ' placeholder='Enter Your Name'
+                                <input type="text" className='py-2 w-full px-3 border rounded-md outline-none dark:bg-slate-900 dark:text-white' placeholder='Enter Your Name'
                                     {...register("fullname", { required: true })}
                                 />
                                 {errors.fullname && <span className='text-red-800 font-bold'>This field is required</span>}
@@ -64,7 +64,7 @@ function Signup() {
                             <div className='mt-4 space-y-2'>
                                 <span>Email</span>
                                 <br />
-                                <input type="email" className='py-2 w-full px-3 border rounded-md outline-none ' placeholder='Enter Your Email'
+                                <input type="email" className='py-2 w-full px-3 border rounded-md outline-none dark:bg-slate-900 dark:text-white ' placeholder='Enter Your Email'
                                     {...register("email", { required: true })}
                                 />
                                 {errors.email && <span className='text-red-800 font-bold'>This field is required</span>}
@@ -72,7 +72,7 @@ function Signup() {
                             <div className='mt-4 space-y-2'>
                                 <span>Password</span>
                                 <br />
-                                <input type="password" className='py-2 w-full px-3 border rounded-md outline-none ' placeholder='Enter Your Password'
+                                <input type="password" className='py-2 w-full px-3 border rounded-md outline-none dark:bg-slate-900 dark:text-white' placeholder='Enter Your Password'
                                     {...register("password", { required: true })}
                                 />
                                 {errors.password && <span className='text-red-800 font-bold'>This field is required</span>}

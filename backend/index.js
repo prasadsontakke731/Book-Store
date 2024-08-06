@@ -10,7 +10,13 @@ import cors from "cors"
 const app = express()
 dotenv.config()
 app.use(express.json())
-app.use(cors())
+app.use(cors(
+    {
+        origin: ["https://book-store-three-teal.vercel.app/"],
+        method: ["POST", "GET"],
+        credential: true
+    }
+))
 const PORT = process.env.PORT || 8090
 const MONGODB_URI = process.env.MONGO_URI
 //connect to mongoDB

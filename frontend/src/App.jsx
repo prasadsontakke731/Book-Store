@@ -10,6 +10,8 @@ import { useAuth } from './context/AuthProvider'
 import { motion, useScroll } from "framer-motion"
 import Contact from './components/Contact'
 import Contacts from './contact/Contacts'
+import BookDetails from './bookDetails/BookDetails'
+import Payments from './payment/Payments'
 
 function App() {
   const [authUser, setAuthUser] = useAuth()
@@ -22,6 +24,8 @@ function App() {
         <Route path='/books' element={authUser ? <Books /> : <Navigate to="/" />} />
         <Route path='/register' element={<Signup />} />
         <Route path='/contact' element={<Contacts />} />
+        <Route path='books/:id' element={authUser ? <BookDetails /> : <Navigate to="/" />} />
+        <Route path='/payment' element={authUser ? <Payments /> : <Navigate to="/" />}/> 
       </Routes>
       <Toaster />
 

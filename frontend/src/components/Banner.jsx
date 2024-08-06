@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import BannerImg from "../../public/Banner.png"
+import BannerImg from "/Banner.png"
 
 function Banner() {
     return (
