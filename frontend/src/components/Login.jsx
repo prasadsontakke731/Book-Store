@@ -18,7 +18,7 @@ function Login() {
             email: data.email,
             password: data.password
         }
-        await axios.post("http://localhost:8080/user/login", userInfo)
+        await axios.post("https://book-backend-1-iq03.onrender.com/user/login", userInfo)
             .then((res) => {
                 console.log(res.data);
                 if (res.data) {
@@ -41,12 +41,9 @@ function Login() {
     }
     return (
         <div>
-            {/* You can open the modal using document.getElementById('ID').showModal() method */}
-            {/* <button className="btn" onClick={() => document.getElementById('my_modal_3').showModal()}>open modal</button> */}
             <dialog id="my_modal_3" className="modal">
                 <div className="modal-box dark:bg-slate-900 dark:text-white">
                     <form method="dialog" onSubmit={handleSubmit(onSubmit)}>
-                        {/* if there is a button in form, it will close the modal */}
                         <Link onClick={() => document.getElementById("my_modal_3").close()} className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</Link>
 
                         <h3 className="font-bold text-lg">Login</h3>

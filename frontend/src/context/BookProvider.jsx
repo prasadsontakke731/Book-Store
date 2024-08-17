@@ -2,6 +2,7 @@
 
 import axios from 'axios';
 import { createContext, useContext, useEffect, useState } from 'react'
+import book from "../../public/book.json"
 
 export const BookContext = createContext();
 export default function BookProvider({ children }) {
@@ -10,7 +11,7 @@ export default function BookProvider({ children }) {
     useEffect(() => {
         const getBook = async () => {
             try {
-                const res = await axios.get("http://localhost:8080/book")
+                const res = await axios.get("https://book-backend-4vef.onrender.com/book")
                 console.log(res.data);
                 setBookData(res.data)
 
@@ -23,7 +24,7 @@ export default function BookProvider({ children }) {
 
     }, [])
     return (
-        <BookContext.Provider value={[bookData, setBookData]}>
+        <BookContext.Provider value={[bookData, setBookData, book]}>
             {children}
         </BookContext.Provider>
     );

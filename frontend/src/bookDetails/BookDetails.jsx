@@ -5,15 +5,15 @@ import Footer from '../components/Footer'
 import BookDetail from '../components/BookDetail'
 
 function BookDetails() {
-  return (
-      <div>
-          <Navbar />
-          <div className='min-h-screen '>
-              <BookDetail />
-          </div>
-          <Footer />
-      </div>
-  )
+    return (
+        <div>
+            <Navbar />
+            <div className='min-h-screen '>
+                <BookDetail />
+            </div>
+            <Footer />
+        </div>
+    )
 }
 
 export default BookDetails

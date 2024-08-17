@@ -44,7 +44,7 @@ function Navbar() {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/books">Books</Link></li>
             <li><Link to="/contact">Contact </Link></li>
-            <li><Link>About</Link></li>
+            <li><Link to="/category">Category</Link></li>
         </>
     )
     return (
@@ -70,12 +70,12 @@ function Navbar() {
                             </div>
                             <ul
                                 tabIndex={0}
-                                className="menu menu-sm dropdown-content bg-base-100 dark:bg-slate-900 dark:text-white rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                                className="menu menu-sm dropdown-content bg-base-100 dark:bg-slate-900  dark:text-white rounded-box z-[1] mt-3 w-80 hover:bg-slate-400 space-y-2 p-2 shadow">
                                 {navItems}
 
                             </ul>
                         </div>
-                        <a className="text-2xl font-bold cursor-pointer">BookStore</a>
+                        <Link to="/" className="text-2xl font-bold cursor-pointer">BookStore</Link>
                     </div>
                     <div className="navbar-end space-x-3">
 
@@ -86,7 +86,7 @@ function Navbar() {
                             </ul>
                         </div>
                         <div className='hidden md:block '>
-                           
+
                         </div>
                         {/* theme */}
                         <label className="swap swap-rotate">

@@ -68,7 +68,7 @@ function Contact() {
                             ></textarea>
                             {errors.message && <span className='text-red-800 font-bold'>This field is required</span>}
                             <button type='submit'
-                                className="dark:bg-slate-900 dark:text-white text-gray-800 dark:border bg-green-200 hover:bg-green-300 font-semibold rounded-md text-sm px-6 py-3 block w-full">Send
+                                className="dark:bg-slate-900 dark:text-white text-gray-800 dark:border bg-green-200 hover:bg-green-300 font-semibold rounded-md text-sm px-6 py-3 block w-full ">Send
                                 Message</button>
                         </form>
                     </div>

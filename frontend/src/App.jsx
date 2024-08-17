@@ -12,6 +12,8 @@ import Contact from './components/Contact'
 import Contacts from './contact/Contacts'
 import BookDetails from './bookDetails/BookDetails'
 import Payments from './payment/Payments'
+import BookCategories from './bookCategory/BookCategories'
+import CategoryDetails from './categoryDetails/CategoryDetails'
 
 function App() {
   const [authUser, setAuthUser] = useAuth()
@@ -25,7 +27,11 @@ function App() {
         <Route path='/register' element={<Signup />} />
         <Route path='/contact' element={<Contacts />} />
         <Route path='books/:id' element={authUser ? <BookDetails /> : <Navigate to="/" />} />
-        <Route path='/payment' element={authUser ? <Payments /> : <Navigate to="/" />}/> 
+        <Route path='/payment' element={authUser ? <Payments /> : <Navigate to="/" />} />
+        <Route path='/category' element={authUser ? <BookCategories /> : <Navigate to="/" />} />
+        <Route path='/category/:id' element={authUser ? <CategoryDetails /> : <Navigate to="/" />} />
+
+
       </Routes>
       <Toaster />
 

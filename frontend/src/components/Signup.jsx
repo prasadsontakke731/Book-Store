@@ -13,7 +13,6 @@ function Signup() {
     const {
         register,
         handleSubmit,
-        watch,
         formState: { errors },
     } = useForm()
 
@@ -25,7 +24,7 @@ function Signup() {
             email: data.email,
             password: data.password
         }
-        await axios.post("http://localhost:8080/user/signup", userInfo)
+        await axios.post("https://book-backend-1-iq03.onrender.com/user/signup", userInfo)
             .then((res) => {
                 console.log(res.data);
                 if (res.data) {
@@ -49,7 +48,6 @@ function Signup() {
                 <div id="my_modal_3" className="w-[500px] ">
                     <div className="modal-box dark:bg-slate-900 dark:text-white ">
                         <form method="dialog" onSubmit={handleSubmit(onSubmit)}>
-                            {/* if there is a button in form, it will close the modal */}
                             <Link to="/" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</Link>
 
                             <h3 className="font-bold text-lg">Sign Up</h3>
