@@ -40,7 +40,14 @@ function BookDetail() {
 
         e.preventDefault()
         handleSubmit()
-        console.log(errors.address);
+
+        // navigate("/payment")
+        // console.log(values.fName.length);
+
+        if (values.fName.length !== 0 && values.lName.length !== 0 && values.email.length !== 0 && values.mobile.length !== 0 && values.address.length !== 0) {
+            navigate("/payment")
+        }
+
 
 
 
