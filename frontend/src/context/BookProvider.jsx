@@ -11,7 +11,7 @@ export default function BookProvider({ children }) {
     useEffect(() => {
         const getBook = async () => {
             try {
-                const res = await axios.get("https://book-backend-4vef.onrender.com/book")
+                const res = await axios.get("https://book-store-backend-1-deul.onrender.com/book")
                 console.log(res.data);
                 setBookData(res.data)
 

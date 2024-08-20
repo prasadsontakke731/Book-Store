@@ -24,7 +24,7 @@ function Signup() {
             email: data.email,
             password: data.password
         }
-        await axios.post("https://book-store-k7va.vercel.app/user/signup", userInfo)
+        await axios.post("http://localhost:8080/user/signup", userInfo)
             .then((res) => {
                 console.log(res.data);
                 if (res.data) {

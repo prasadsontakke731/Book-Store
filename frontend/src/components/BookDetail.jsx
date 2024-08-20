@@ -1,23 +1,50 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react'
-import { useBook } from '../context/BookProvider'
+import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import { useFormik } from "formik"
+import { AddressValidation } from './AddressValidation'
 import book from "../../public/book.json"
 
 const tax = 10;
-const shop = 10
+const shop = 10;
+const initialValue = {
+    fName: "",
+    lName: "",
+    email: "",
+    mobile: "",
+    address: ""
+}
 function BookDetail() {
     const navigate = useNavigate()
-    const [bookData, setBookData] = useBook()
+    const { values, handleBlur, handleChange, handleSubmit, errors } = useFormik({
+        initialValues: initialValue,
+        validationSchema: AddressValidation,
+        onSubmit: (value) => {
+            console.log(value);
+
+        }
+    })
+
+
+    console.log();
+
     const { id } = useParams()
     console.log(id);
-    console.log(bookData);
+
     const filterData = book.map((item) => item)
     const singleData = filterData.filter((item) => item.id == id);
     console.log(singleData);
 
 
+    const submit = (e) => {
 
+        e.preventDefault()
+        handleSubmit()
+        console.log(errors.address);
+
+
+
+    }
 
 
 
@@ -36,6 +63,7 @@ function BookDetail() {
                     </div>
                 </div>
                 <div className=' flex flex-col justify-center  mt-auto mb-auto'>
+
                     <div className="mt-6 grow sm:mt-8 lg:mt-0">
                         <div className="space-y-4 rounded-lg border border-gray-100 bg-gray-50 p-6 dark:border-gray-700 dark:bg-gray-800">
                             <div className="space-y-2">
@@ -63,79 +91,88 @@ function BookDetail() {
                             </dl>
                         </div>
                     </div>
-                    <div className="space-y-3 mt-2">
+                    <div className="space-y-3 mt-2 px-2 mr-4  ">
+                        <form onSubmit={submit}>
 
-                        <div className="">
+
                             <input
                                 type="text"
-                                className="form-control w-full mx-2 py-2 outline-none"
+                                name="fName"
+                                className="form-control w-full mx-2 py-2 outline-none dark:bg-slate-900 dark:text-white"
                                 placeholder="First Name"
-                                name="fname"
                                 // value={formData.fname}
                                 // onChange={handleChange}
-                                required
+                                value={values.fName}
+                                onBlur={handleBlur}
+                                onChange={handleChange}
                             />
-                        </div>
+                            <p className='ms-2 tracking-widest text-red-600'>{errors.fName && errors.fName}</p>
 
 
-                        <div className="">
+
+
                             <input
                                 type="text"
-                                className="form-control w-full mx-2 py-2 outline-none"
+                                name="lName"
+                                className="form-control w-full mx-2 py-2 outline-none dark:bg-slate-900 dark:text-white"
                                 placeholder="Last Name"
-                                name="lname"
                                 // value={formData.lname}
                                 // onChange={handleChange}
-                                required
+                                value={values.lName}
+                                onBlur={handleBlur}
+                                onChange={handleChange}
                             />
-                        </div>
+                            <p className='ms-2 tracking-widest text-red-600'>{errors.lName && errors.lName}</p>
 
-                        <div className="">
-                            <div className="">
-                                <input
-                                    type="email"
-                                    className="form-control w-full mx-2 py-2 outline-none"
-                                    placeholder="Email"
-                                    name="email"
-                                    // value={formData.email}
-                                    // onChange={handleChange}
-                                    required
-                                />
-                            </div>
-                        </div>
 
-                        <div className="">
+
+                            <input
+                                type="email"
+                                name="email"
+                                className="form-control w-full mx-2 py-2 outline-none dark:bg-slate-900 dark:text-white"
+                                placeholder="Email"
+                                // value={formData.email}
+                                // onChange={handleChange}
+                                value={values.email}
+                                onBlur={handleBlur}
+                                onChange={handleChange}
+                            />
+                            <p className='ms-2 tracking-widest text-red-600'>{errors.email && errors.email}</p>
+
+
                             <input
                                 type="number"
-                                className="form-control w-full mx-2 py-2 outline-none"
-                                placeholder="Mobile"
                                 name="mobile"
+                                className="form-control w-full mx-2 py-2 outline-none dark:bg-slate-900 dark:text-white"
+                                placeholder="Mobile"
                                 minLength={10}
                                 maxLength={10}
                                 // value={formData.mobile}
                                 // onChange={handleChange}
-                                required
+                                value={values.mobile}
+                                onBlur={handleBlur}
+                                onChange={handleChange}
                             />
-                        </div>
+                            <p className='ms-2 tracking-widest text-red-600'>{errors.mobile && errors.mobile}</p>
 
-                        <div className="">
+
+
                             <input
                                 type="text"
-                                className="form-control w-full mx-2 py-2 outline-none"
-                                placeholder="Address"
-                                name="address"
+                                name='address'
+                                placeholder="address"
+                                className="form-control w-full mx-2 py-2 outline-none dark:bg-slate-900 dark:text-white"
                                 // value={formData.address}
                                 // onChange={handleChange}
-                                required
+                                value={values.address}
+                                onBlur={handleBlur}
+                                onChange={handleChange}
                             />
-                        </div>
+                            <p className='ms-2 tracking-widest text-red-600'>{errors.address && errors.address}</p>
 
-
-
-
-
+                            <button className='bg-green-500 mt-5 text-white ms-2 py-2 rounded-md font-bold w-full' >Get Book</button>
+                        </form>
                     </div>
-                    <button className='bg-green-500 mt-5 text-white px-3 py-2 rounded-md font-bold' onClick={() => navigate("/payment")}>Get Book</button>
 
                 </div>
 
