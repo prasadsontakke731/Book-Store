@@ -7,6 +7,8 @@ import { BrowserRouter } from "react-router-dom"
 import AuthProvider from './context/AuthProvider.jsx'
 import BookProvider from './context/BookProvider.jsx'
 import SearchProvider from './context/SearchProvider.jsx'
+import ScrollToTop from './components/ScrollToTop.jsx'
+import Loader from './components/Loader.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -14,9 +16,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <BookProvider>
         <SearchProvider>
 
-        <div className='dark:bg-slate-900 dark:text-white '>
-          <App />
-        </div>
+          <div className='dark:bg-slate-900 dark:text-white '>
+            <ScrollToTop />
+            <App />
+            
+          </div>
         </SearchProvider>
       </BookProvider>
     </AuthProvider>

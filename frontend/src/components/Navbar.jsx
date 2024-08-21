@@ -1,12 +1,14 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react'
+import { motion, useScroll } from "framer-motion"
+
 import { Link } from "react-router-dom"
 import Login from './Login';
 import { useAuth } from '../context/AuthProvider';
 import Logout from './Logout';
 
 function Navbar() {
-
+    const { scrollYProgress } = useScroll();
     const [authUser, setAuthUser] = useAuth()
     const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light")
 
@@ -49,9 +51,12 @@ function Navbar() {
     )
     return (
         <>
+
             <div className={`max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 bg-base-200 z-50 dark:bg-slate-900 dark:text-white ${sticky ? "sticky-navbar shadow-md bg-base-200 duration-300 translate-all ease-in-out" : ""
                 }`}>
                 <div className="navbar bg-base-200 dark:bg-slate-900 dark:text-white">
+
+                    <motion.div className='fixed top-0 left-0 right-0 origin-left h-[4px] rounded-2xl z-0 w-full bg-pink-500' style={{ scaleX: scrollYProgress }}></motion.div>
                     <div className="navbar-start">
                         <div className="dropdown">
                             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

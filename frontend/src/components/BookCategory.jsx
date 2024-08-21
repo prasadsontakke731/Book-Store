@@ -17,7 +17,7 @@ function BookCategory() {
 
                     {
                         cBook.map((item) => {
-                            return <div className='h-[200px] w-[250px] flex flex-col justify-center align-middle ml-auto mr-auto dark:bg-slate-900 dark:text-white dark:hover:bg-gray-600 rounded-md cursor-pointer hover:space-y-3 transition-all ease-in-out border gap- my-3 hover:bg-gray-300' key={item.id} onClick={() => navigate(`/category/${item.id}`)}>
+                            return <div className='h-[200px] w-[250px] flex flex-col justify-center align-middle ml-auto mr-auto dark:bg-slate-900 dark:text-white dark:hover:bg-gray-600 rounded-md cursor-pointer hover:space-y-3 transition-all ease-in-out gap- my-3 hover:bg-gray-300 ' key={item.id} onClick={() => navigate(`/category/${item.id}`)}>
                                 <img src={item.img} alt="" height={50} width={100} className='mx-auto my-2 ' />
                                 <span className=' mx-auto '>{item.name}</span></div>
                         })

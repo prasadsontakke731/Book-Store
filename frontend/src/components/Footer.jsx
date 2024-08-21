@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
+// import emoji from "../assets/love.png"
 
 function Footer() {
     return (
@@ -50,7 +51,7 @@ function Footer() {
                     </div> */}
                 </nav>
                 <aside>
-                    <p>Copyright © {new Date().getFullYear()} - All right reserved by <span className='text-pink-600 hover:cursor-pointer'>Prasad Sontakke</span></p>
+                    <p>Copyright © {new Date().getFullYear()} - All right reserved by <span className='text-pink-600 hover:cursor-pointer'>Prasad Sontakke ❤️😍 </span></p>
                 </aside>
             </footer>
         </div>

@@ -1,10 +1,12 @@
+import React, { Suspense } from 'react'
 /* eslint-disable no-unused-vars */
 
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { Toaster } from "react-hot-toast"
 import './App.css'
 import Home from './Home/Home'
-import Books from './books/Books'
+// import Books from './books/Books'
+const LazyBook = React.lazy(() => import("./books/Books"))
 import Signup from './components/Signup'
 import { useAuth } from './context/AuthProvider'
 import { motion, useScroll } from "framer-motion"
@@ -15,6 +17,7 @@ import Payments from './payment/Payments'
 import BookCategories from './bookCategory/BookCategories'
 import CategoryDetails from './categoryDetails/CategoryDetails'
 
+
 function App() {
   const [authUser, setAuthUser] = useAuth()
   const { scrollYProgress } = useScroll();
@@ -23,7 +26,9 @@ function App() {
       <motion.div style={{ scaleX: scrollYProgress }} className='scrollAnimation z-50'></motion.div>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/books' element={authUser ? <Books /> : <Navigate to="/" />} />
+        <Route path='/books' element={authUser ? <Suspense fallback={<p>Data is Loading...</p>}>
+          <LazyBook />
+        </Suspense> : <Navigate to="/" />} />
         <Route path='/register' element={<Signup />} />
         <Route path='/contact' element={<Contacts />} />
         <Route path='books/:id' element={authUser ? <BookDetails /> : <Navigate to="/" />} />

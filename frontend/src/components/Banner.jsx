@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import BannerImg from "/Banner.png"
+import { Link } from 'react-router-dom';
 
 function Banner() {
     return (
@@ -8,8 +9,8 @@ function Banner() {
             <div className='max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-10 dark:bg-slate-900 dark:text-white'>
                 <div className='w-full order-2 md:order-1 md:w-1/2 mt-12 md:mt-36'>
                     <div className='space-y-8'>
-                        <h1 className='text-2xl md:text-4xl font-bold'>Hello, welocme here to learn something <span className='text-pink-600'>new everyday</span>!!!</h1>
-                        <p className='text-sm md:text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis reprehenderit eius quis error reiciendis, saepe fuga voluptas sequi obcaecati assumenda architecto vel necessitatibus labore tempora sapiente rem aspernatur. Et, cupiditate.</p>
+                        <h1 className='text-2xl md:text-4xl font-bold'>Hello, welocme to My  <span className='text-pink-600'>Book Store App</span>!!!</h1>
+                        <p className='text-sm md:text-xl'>Reading books can significantly expand your vocabulary. As you encounter new words and concepts, you ll increase your knowledge and develop a better understanding of language. This, in turn, can help you communicate more effectively and improve your writing skills.</p>
                         <label className="input input-bordered flex items-center gap-2 dark:bg-slate-900 dark:text-white dark:border-white">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +24,7 @@ function Banner() {
                             </svg>
                             <input type="text" className="grow dark:bg-slate-900 dark:text-white " placeholder="Email" />
                         </label>
-                        <button className='btn btn-secondary mt-10'>CLick</button>
+                        <Link className='btn btn-secondary mt-10' to="/contact">CLick</Link>
                     </div>
 
                 </div>
